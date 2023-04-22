@@ -1,3 +1,5 @@
+#import playsound
+
 '''
 Лист заданий «Словари»
 1. Консольная программа-«чат-бот», которая всё время спрашивает команду. В программе есть словарь, описы
@@ -15,8 +17,8 @@ while(True):
     
     if Com=="Add":
         if len(Persoonazh)<10 or len(Persoonazh)==10:
-            ArgName=input("Измени часть своего ботинка, но сначала введи имя его части: ")
-            ArgIn=input("Изменяй часть ботинка: ")
+            ArgName=input("Введи имя новой части: ")
+            ArgIn=input("Добавь что будет в новой части ботинка: ")
             Persoonazh[ArgName]=ArgIn
         else:
             print("Ботинок не может вместить в себя больше 10 деталей")
@@ -36,16 +38,14 @@ while(True):
         
         
     elif Com=="Del":
-        ArgName=input("Измени часть своего ботинка, но сначала введи имя его части: ")
-        ArgIn=input("Изменяй часть ботинка: ")
-        Persoonazh[ArgName]=ArgIn
+        ArgName=input("Введи имя части которую хотите удалить: ")
+        del Persoonazh[ArgName]
     elif Com=="Print":
         print(Persoonazh.keys())
         print(Persoonazh.values())
+    elif Com=="Exit":
+        exit()
     else:
         print("Ты дал ботинку не правильную команду '_'")
         print("")
     Com=input("Передай ботинку команду: ")
-    
-    
-    
